@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Git Branch Studio",
+  "version": "1.6",
+  "description": "Hệ thống quản lý và tạo cấu trúc nhánh Git chuyên nghiệp.",
+  "permissions": ["clipboardWrite", "storage", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "git.png"
+  },
+  "icons": {
+    "16": "git.png",
+    "48": "git.png",
+    "128": "git.png"
+  }
+}
