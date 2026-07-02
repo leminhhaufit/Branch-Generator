@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnLanguage').addEventListener('click', () => {
     currentLanguage = currentLanguage === 'vi' ? 'en' : 'vi';
     chrome.storage.local.set({ language: currentLanguage });
+    chrome.runtime.sendMessage({ type: 'LANGUAGE_CHANGED', language: currentLanguage });
     applyLanguage(currentLanguage);
     chrome.storage.local.get(['commitHistory', 'branchHistory'], (result) => {
       renderHistory(result.commitHistory || []);
